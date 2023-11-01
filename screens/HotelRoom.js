@@ -173,7 +173,7 @@ const HotelRoom = () => {
             alignItems: "center",
           }}
         >
-          <View
+          {/* <View
             style={{
               flexDirection: "row",
               alignItems: "center",
@@ -225,7 +225,7 @@ const HotelRoom = () => {
                 30 mins or free
               </Text>
             </View>
-          </View>
+          </View> */}
 
           <View
             style={{
@@ -267,16 +267,16 @@ const HotelRoom = () => {
         >
           <Fontisto
             style={{ marginLeft: 7 }}
-            name="motorcycle"
+            name="room"
             size={22}
             color="#505050"
           />
           <Text style={{ marginLeft: 9, fontSize: 15 }}>
-            ₹30 additional distance fee
+            Search your room
           </Text>
         </View>
         <View style={{ marginLeft: 10, marginTop: 10 }}>
-          <Text style={{ fontSize: 17, fontWeight: "700" }}>Full Menu</Text>
+          <Text style={{ fontSize: 17, fontWeight: "700" }}>See all rooms</Text>
           <Text
             style={{
               backgroundColor: "#ff1493",
@@ -288,8 +288,6 @@ const HotelRoom = () => {
         </View>
         {menuData.map((item, index) => (
           <Menu
-            // additems={additems}
-            // setAdditems={setAdditems}
             cart={cart}
             setCart={setCart}
             key={index}
@@ -297,7 +295,6 @@ const HotelRoom = () => {
             restaurentName={restaurentName}
           />
         ))}
-        {/* </Pressable> */}
       </ScrollView>
 
       <ViewCart
@@ -309,15 +306,6 @@ const HotelRoom = () => {
   );
 };
 
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     addItemToCart: (product) =>
-//       dispatch({
-//         type: "ADD_TO_CART",
-//         payload: product,
-//       }),
-//   };
-// };
 
 export default HotelRoom;
 

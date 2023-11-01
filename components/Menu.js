@@ -24,7 +24,6 @@ const Menu = ({ menu, cart, setCart }) => {
 
 
   return (
-    // <Pressable>
     <Pressable>
       <ScrollView style={{ flex: 1, backgroundColor: "white" }}>
         <View
@@ -43,7 +42,7 @@ const Menu = ({ menu, cart, setCart }) => {
                 fontWeight: "bold",
               }}
             >
-              {menu.name}
+              Room no: {menu.roomNumber}
             </Text>
             <Text
               style={{
@@ -55,7 +54,56 @@ const Menu = ({ menu, cart, setCart }) => {
                 fontWeight: "600",
               }}
             >
-              {menu.price}
+              Name: {menu.name}
+            </Text>
+            <Text
+              style={{
+                marginLeft: 10,
+                fontSize: 16,
+
+                marginVertical: 4,
+                fontSize: 15,
+                fontWeight: "600",
+              }}
+            >
+              Floor: {menu.floor}
+            </Text>
+         
+            <Text
+              style={{
+                marginLeft: 10,
+                fontSize: 16,
+
+                marginVertical: 4,
+                fontSize: 15,
+                fontWeight: "600",
+              }}
+            >
+              Balcony: {menu.balcony}
+            </Text>
+            <Text
+              style={{
+                marginLeft: 10,
+                fontSize: 16,
+
+                marginVertical: 4,
+                fontSize: 15,
+                fontWeight: "600",
+              }}
+            >
+              Wifi: {menu.wifi}
+            </Text>
+            <Text
+              style={{
+                marginLeft: 10,
+                fontSize: 16,
+
+                marginVertical: 4,
+                fontSize: 15,
+                fontWeight: "600",
+              }}
+            >
+              Price: {menu.price}
             </Text>
             <View style={{ flexDirection: "row", alignItems: "center" }}>
               <Text
@@ -87,7 +135,7 @@ const Menu = ({ menu, cart, setCart }) => {
                   color: "#E52B50",
                 }}
               >
-                {(bestSeller && menu.bestSeller) || menu.mustTry}
+                {/* {(bestSeller && menu.bestSeller) || menu.mustTry} */}
               </Text>
             </View>
             <View
@@ -157,18 +205,19 @@ const Menu = ({ menu, cart, setCart }) => {
               setCart(cart.filter((p) => p.id !== menu.id));
             }}
           >
-            <Text
+            {/* <Text
               style={{ fontSize: 25, color: "white", paddingHorizontal: 10 }}
             >
               -
-            </Text>
+            </Text> */}
           </Pressable>
 
           <Pressable>
             <Text
               style={{ fontSize: 20, color: "white", paddingHorizontal: 10 }}
             >
-              {additems}
+              {/* {additems} */}
+              {/* Cart */}
             </Text>
           </Pressable>
 
@@ -181,7 +230,7 @@ const Menu = ({ menu, cart, setCart }) => {
             <Text
               style={{ fontSize: 20, color: "white", paddingHorizontal: 10 }}
             >
-              +
+              Cart
             </Text>
           </Pressable>
         </Pressable>
@@ -192,8 +241,4 @@ const Menu = ({ menu, cart, setCart }) => {
 
 export default Menu;
 
-// export default connect(null, mapDispatchToProps) (Menu)
-
 const styles = StyleSheet.create({});
-
-//() => setAdditems(Math.max(0, additems - 1))

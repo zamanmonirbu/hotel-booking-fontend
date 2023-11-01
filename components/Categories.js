@@ -4,7 +4,7 @@ import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native
 const items = [
     {
         id:"1",
-        name:"fastest delivery",
+        name:"Premium Hotel",
     },
     {
         id:"2",
@@ -16,15 +16,15 @@ const items = [
     },
     {
         id:"4",
-        name:"cuisines",
+        name:"Price",
     },
     {
         id:"5",
-        name:"MAX Safety",
+        name:"Safety",
     },
     {
         id:"6",
-        name:"Pro",
+        name:"Location",
     }
 ]
 

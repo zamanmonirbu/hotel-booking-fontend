@@ -24,7 +24,7 @@ const ViewCart = (props) => {
   const [modal, setModal] = useState(false);
   const [sound, setSound] = React.useState();
   const total = cart
-    .map((item) => Number(item.price.replace("₹", "")))
+    .map((item) => Number(item.price.replace("$", "")))
     .reduce((prev, curr) => prev + curr, 0); 
   const deliveryCharge = Number(30);
   const donation = Number(3);
@@ -115,7 +115,7 @@ const ViewCart = (props) => {
               padding: 10,
             }}
           >
-            <MaterialIcons style={{}} name="timer" size={24} color="green" />
+            <MaterialIcons style={{}} name="apartment" size={24} color="green" />
             <Text
               style={{
                 color: "black",
@@ -124,7 +124,7 @@ const ViewCart = (props) => {
                 marginLeft: 6,
               }}
             >
-              Delivery in 30 mins
+              Ready to book
             </Text>
           </View>
           <ScrollView>
@@ -156,7 +156,7 @@ const ViewCart = (props) => {
               }}
             />
 
-            <View style={{ padding: 10 }}>
+            {/* <View style={{ padding: 10 }}>
               <Text
                 style={{ fontSize: 16, fontWeight: "bold", paddingBottom: 10 }}
               >
@@ -199,7 +199,7 @@ const ViewCart = (props) => {
                   </Pressable>
                 </View>
               </View>
-            </View>
+            </View> */}
 
             <View
               style={{
@@ -216,8 +216,7 @@ const ViewCart = (props) => {
             >
               <FontAwesome5 name="leaf" size={24} color="#20B2AA" />
               <Text style={{ marginLeft: 10, fontSize: 15 }}>
-                We fund environmental projects to offset carbon footprint of
-                our deliveries
+                The best service we will provide you. In sha allah
               </Text>
             </View>
 
@@ -237,9 +236,9 @@ const ViewCart = (props) => {
                   padding: 10,
                 }}
               >
-                <Text>Item total</Text>
+                <Text>Rent Cost</Text>
                 <Text>
-                  {" ₹"}
+                  {" $"}
                   {total}
                 </Text>
               </View>
@@ -252,14 +251,14 @@ const ViewCart = (props) => {
                   padding: 10,
                 }}
               >
-                <Text style={{}}>Delivery charge upto 1 km</Text>
+                <Text style={{}}>Other service</Text>
                 <Text>
-                  {" ₹"}
+                  {" $"}
                   {deliveryCharge}
                 </Text>
               </View>
 
-              <View
+              {/* <View
                 style={{
                   flexDirection: "row",
                   alignItems: "center",
@@ -267,12 +266,12 @@ const ViewCart = (props) => {
                   padding: 10,
                 }}
               >
-                <Text>Donate ₹3 to Feeding India </Text>
+                <Text>Donate 3 to Feeding India </Text>
                 <Text>
                   {" ₹"}
                   {donation}
                 </Text>
-              </View>
+              </View> */}
             </View>
 
             <View
@@ -308,7 +307,7 @@ const ViewCart = (props) => {
               GrandTotal
             </Text>
             <Text style={{ color: "red", fontSize: 17, fontWeight: "600" }}>
-              {"₹"}
+              {"$"}
               {total + 3 + 30}
             </Text>
           </View>
@@ -369,7 +368,7 @@ const ViewCart = (props) => {
               width: 180,
             }}
           >
-            View Cart • {"₹"}
+            View Cart • {"$"}
             {total}
           </Text>
         </Pressable>

@@ -4,13 +4,10 @@ import { TextInput } from 'react-native';
 import { EvilIcons } from "@expo/vector-icons";
 import Hotels from '../components/Hotels';
 import hotels from "../data/hotels";
-// import hotels from '../data/hotelsData';
 import { useNavigation } from "@react-navigation/native";
 import Categories from "../components/Categories";
 
  const restaurent = hotels[0];
-//  console.log(restaurent);
-
 const HomeScreen = () => {
   const [location, setLocation] = useState(null);
   const [errorMsg, setErrorMsg] = useState(null);
@@ -20,10 +17,7 @@ const HomeScreen = () => {
     return (
       <KeyboardAvoidingView style={{ flex: 1, marginTop: 25 }}>
         <ScrollView style={{ flex: 1 }}>
-          <SafeAreaView>
-           
-
-           
+          <SafeAreaView>          
             <View style={styles.container}>
               <EvilIcons
                 style={{ marginRight: 10 }}
@@ -33,7 +27,7 @@ const HomeScreen = () => {
               />
               <TextInput
                 style={{ fontSize: 18 }}
-                placeholder="Restaurent name, cuisine, or a dish"
+                placeholder="Name, Location"
               />
             </View>
             <Categories/>
@@ -47,13 +41,13 @@ const HomeScreen = () => {
                 <Image
                   style={styles.image}
                   source={{
-                    uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBjnMjX8qQb9mLh_IBBHP90SZXccv6uTa662T2Ljfp2xrvNO5IrJmgeWC-RpS_Bxkfzak&usqp=CAU",
+                    uri: "https://scontent-sin6-3.xx.fbcdn.net/v/t1.6435-9/136144268_3952594544805757_3819170963345376969_n.png?_nc_cat=104&ccb=1-7&_nc_sid=7f8c78&_nc_ohc=4qUs7qS5Iq0AX_LVswx&_nc_ht=scontent-sin6-3.xx&oh=00_AfC_aUwhSOoZj16tMaFsVdx6PqGRWj6rjx5c7MgEywiVfw&oe=656913D2",
                   }}
                 />
                 <Image
                   style={styles.image}
                   source={{
-                    uri: "https://cdn.businesstraveller.com/wp-content/uploads/fly-images/1002269/zomato-infinity-dining-916x516-1-916x516.jpg",
+                    uri: "https://5.imimg.com/data5/GLADMIN/Default/2022/9/BH/GH/IV/15510203/hotels-booking-service-500x500.jpg",
                   }}
                 />
               </View>
@@ -66,7 +60,7 @@ const HomeScreen = () => {
                 paddingLeft: 6,
               }}
             >
-              Eat what makes you happy
+              Book now for your happiness.
             </Text>
             <Pressable>
               <View
@@ -80,7 +74,7 @@ const HomeScreen = () => {
                   <Image
                     style={styles.MiddleImage}
                     source={{
-                      uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRZDb8hWL40qKbszAavTSLFkyOcAhvnPmgXw&usqp=CAU",
+                      uri: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/498667890.jpg?k=3bdaf135c238760c466fe6b2d577436997329e56d41f7f199536857c530748d8&o=&hp=1",
                     }}
                   />
                   <Text
@@ -92,7 +86,7 @@ const HomeScreen = () => {
                       textAlign: "center",
                     }}
                   >
-                    Thalis
+                    Dhaka
                   </Text>
                 </View>
 
@@ -100,7 +94,7 @@ const HomeScreen = () => {
                   <Image
                     style={styles.MiddleImage}
                     source={{
-                      uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2fIIZ5yHqkqXHgg9TuQuJ_mFZbINJLt1ODQ&usqp=CAU",
+                      uri: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/498422921.jpg?k=0ef8073c9f658eb1286095f6b75b654bf67db2a5c29fa7c87f8cd953134e4476&o=&hp=1",
                     }}
                   />
                   <Text
@@ -112,7 +106,7 @@ const HomeScreen = () => {
                       textAlign: "center",
                     }}
                   >
-                    Pizzas
+                    Khulna
                   </Text>
                 </View>
 
@@ -120,7 +114,7 @@ const HomeScreen = () => {
                   <Image
                     style={styles.MiddleImage}
                     source={{
-                      uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI-SsbTrLAm9o9ABakjoILX9G5LIDNJnVwvA&usqp=CAU",
+                      uri: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/498457977.jpg?k=8de82ec92f4fbc7554d8a607f9903a473b159a21aabc3bb2183920e360c19844&o=&hp=1",
                     }}
                   />
                   <Text
@@ -132,7 +126,7 @@ const HomeScreen = () => {
                       textAlign: "center",
                     }}
                   >
-                    Burger
+                    Barishal
                   </Text>
                 </View>
 
@@ -140,7 +134,7 @@ const HomeScreen = () => {
                   <Image
                     style={styles.MiddleImage}
                     source={{
-                      uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJsC7uWf7rd0qrXk2zCpasTV8W-HCcr9JeKQ&usqp=CAU",
+                      uri: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/498667893.jpg?k=2715c0a8658e803de581d69033d01e6aa7aa1265ca6d2857e5a6e2b3060dcad8&o=&hp=1",
                     }}
                   />
                   <Text
@@ -152,12 +146,11 @@ const HomeScreen = () => {
                       textAlign: "center",
                     }}
                   >
-                    Dosas
+                    Bhula
                   </Text>
                 </View>
               </View>
             </Pressable>
-            {/* <Hotels restaurent={restaurent}/> */}
             <FlatList
               data={hotels}
               renderItem={({ item }) => <Hotels restaurent={item} />}
